@@ -6,7 +6,10 @@ import com.project.chatbot.repository.MessageRepository;
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import vn.pipeline.Annotation;
+import vn.pipeline.VnCoreNLP;
 
+import java.io.IOException;
 import java.util.Date;
 import java.util.Optional;
 
@@ -25,5 +28,18 @@ public class MessageServiceImpl implements MessageService{
             messageDTO.setTimestamp(new Date(System.currentTimeMillis()));
             messageRepository.save(messageDTO);
         }
+    }
+
+    public String analysisMessage(MessageDTO messageDTO) throws IOException {
+        String[] annotators = {"wseg", "pos", "ner", "parse"};
+        VnCoreNLP pipeline = new VnCoreNLP(annotators);
+
+        String str = messageDTO.getContent();
+        Annotation annotation = new Annotation(str);
+        pipeline.annotate(annotation);
+
+        System.out.println(annotation.toString());
+
+        return annotation.toString();
     }
 }
