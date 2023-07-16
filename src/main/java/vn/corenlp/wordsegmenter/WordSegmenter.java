@@ -19,7 +19,7 @@ public class WordSegmenter {
     private static WordSegmenter wordSegmenter = null;
     public WordSegmenter()
             throws IOException {
-        String modelPath = "target/models/wordsegmenter/wordsegmenter.rdr";
+        String modelPath = "src/models/wordsegmenter/wordsegmenter.rdr";
         if (!new File(modelPath).exists())
             throw new IOException("WordSegmenter: " + modelPath + " is not found!");
 

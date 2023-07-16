@@ -25,12 +25,12 @@ public class LexicalInitializer {
         this.initLexica = initLexica;
         this.lexicalMap = new HashMap<>();
         
-        String lexicalPath = "target/models/ner/vi-500brownclusters.xz";
+        String lexicalPath = "src/models/ner/vi-500brownclusters.xz";
         if (!new File(lexicalPath).exists())
             throw new IOException("LexicalInitializer: " + lexicalPath + " is not found!");
         lexicalMap.put("word_clusters", lexicalPath);
         
-        lexicalPath = "target/models/ner/vi-pretrainedembeddings.xz";
+        lexicalPath = "src/models/ner/vi-pretrainedembeddings.xz";
         if (!new File(lexicalPath).exists())
             throw new IOException("LexicalInitializer: " + lexicalPath + " is not found!");
         lexicalMap.put("word_embeddings", lexicalPath);

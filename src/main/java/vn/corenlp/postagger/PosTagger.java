@@ -18,7 +18,7 @@ public class PosTagger {
     private static PosTagger posTagger = null;
     private MorphTagger tagger;
     public PosTagger() throws IOException {
-        String modelPath = "target/models/postagger/vi-tagger";
+        String modelPath = "src/models/postagger/vi-tagger";
         if (!new File(modelPath).exists()) throw new IOException("PosTagger: " + modelPath + " is not found!");
         tagger = FileUtils.loadFromFile(modelPath);
 
