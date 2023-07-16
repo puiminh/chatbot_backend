@@ -32,7 +32,7 @@ public class NerRecognizer {
         nlpDecoder = new NLPDecoder();
         List<NLPComponent<NLPNode>> components = new ArrayList();
 
-        String modelPath = Utils.jarDir + "/models/ner/vi-ner.xz";
+        String modelPath = "target/models/ner/vi-ner.xz";
         if (!new File(modelPath).exists()) throw new IOException("NerRecognizer: " + modelPath + " is not found!");
         GlobalLexica lexica = LexicalInitializer.initialize(true).initializeLexica();
         if(lexica != null) {

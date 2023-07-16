@@ -30,7 +30,7 @@ public class DependencyParser {
         nlpDecoder = new NLPDecoder();
         List<NLPComponent<NLPNode>> components = new ArrayList();
 
-        String modelPath = Utils.jarDir + "/models/dep/vi-dep.xz";
+        String modelPath = "target/models/dep/vi-dep.xz";
         if (!new File(modelPath).exists()) throw new IOException("DependencyParser: " + modelPath + " is not found!");
         GlobalLexica lexica = LexicalInitializer.initialize(true).initializeLexica();
         if(lexica != null) {
