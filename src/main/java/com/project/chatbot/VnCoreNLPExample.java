@@ -26,6 +26,7 @@ public class VnCoreNLPExample {
         Annotation annotation = new Annotation(str); 
         pipeline.annotate(annotation); 
         List<Word> words = annotation.getWords();
+        List<Sentence> sentences = annotation.getSentences();
         List<String> tokens = annotation.getTokens();
         String wordSegmentedText = annotation.getWordSegmentedText();
         String wordSegmentedTaggedText = annotation.getWordSegmentedTaggedText();
@@ -45,19 +46,30 @@ public class VnCoreNLPExample {
         headerRow.createCell(3).setCellValue("NER Label");
         headerRow.createCell(4).setCellValue("Head");
         headerRow.createCell(5).setCellValue("Dep Label");
+        headerRow.createCell(6).setCellValue("Entity");
+        headerRow.createCell(7).setCellValue("Intent");
 
         // Ghi dữ liệu từ danh sách words vào các hàng trong sheet
         int rowIndex = 1;
-        for (Word word : words) {
-            Row dataRow = sheet.createRow(rowIndex);
-            dataRow.createCell(0).setCellValue(word.getIndex());
-            dataRow.createCell(1).setCellValue(word.getForm());
-            dataRow.createCell(2).setCellValue(word.getPosTag());
-            dataRow.createCell(3).setCellValue(word.getNerLabel());
-            dataRow.createCell(4).setCellValue(word.getHead());
-            dataRow.createCell(5).setCellValue(word.getDepLabel());
+        for (Sentence sentence : sentences) {
+            for (Word word : sentence.getWords()) {
+                Row dataRow = sheet.createRow(rowIndex);
+                dataRow.createCell(0).setCellValue(word.getIndex());
+                dataRow.createCell(1).setCellValue(word.getForm());
+                dataRow.createCell(2).setCellValue(word.getPosTag());
+                dataRow.createCell(3).setCellValue(word.getNerLabel());
+                dataRow.createCell(4).setCellValue(word.getHead());
+                dataRow.createCell(5).setCellValue(word.getDepLabel());
+
+                if (word.getDepLabel().equals("pob") && !word.getPosTag().equals("P")) {
+                    dataRow.createCell(6).setCellValue(word.getDepLabel());
+                }
+
+                rowIndex++;
+            }
             rowIndex++;
         }
+
 
         // Lưu workbook vào file
         try (FileOutputStream fileOut = new FileOutputStream("output.xlsx")) {

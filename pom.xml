@@ -75,11 +75,11 @@
 		</dependency>
 
 		<dependency>
-			<groupId>vncorenlp</groupId>
-			<artifactId>vn-core-nlp</artifactId>
-			<version>1.2.0</version>
+			<groupId>com.vncorenlp</groupId>
+			<artifactId>vncorenlp</artifactId>
+			<version>1.2</version>
 			<scope>system</scope>
-			<systemPath>${project.basedir}/libs/VnCoreNLP-1.2.jar</systemPath>
+			<systemPath>${project.basedir}\libs\VnCoreNLP-1.2.jar</systemPath>
 		</dependency>
 
 		<!-- Excel 2003 (.xls) -->
