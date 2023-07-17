@@ -46,12 +46,13 @@ public class VnCoreNLPExample {
         headerRow.createCell(3).setCellValue("NER Label");
         headerRow.createCell(4).setCellValue("Head");
         headerRow.createCell(5).setCellValue("Dep Label");
-        headerRow.createCell(6).setCellValue("Entity");
-        headerRow.createCell(7).setCellValue("Intent");
+        headerRow.createCell(6).setCellValue("Intent - Value -Entity");
 
         // Ghi dữ liệu từ danh sách words vào các hàng trong sheet
         int rowIndex = 1;
         for (Sentence sentence : sentences) {
+            int pobIndex = -1;
+            String detValue = "";
             for (Word word : sentence.getWords()) {
                 Row dataRow = sheet.createRow(rowIndex);
                 dataRow.createCell(0).setCellValue(word.getIndex());
@@ -60,12 +61,22 @@ public class VnCoreNLPExample {
                 dataRow.createCell(3).setCellValue(word.getNerLabel());
                 dataRow.createCell(4).setCellValue(word.getHead());
                 dataRow.createCell(5).setCellValue(word.getDepLabel());
+                rowIndex++;
+
+                if (word.getDepLabel().equals("det")) {
+                    dataRow.createCell(6).setCellValue(word.getForm());
+                }
 
                 if (word.getDepLabel().equals("pob") && !word.getPosTag().equals("P")) {
                     dataRow.createCell(6).setCellValue(word.getDepLabel());
+                    pobIndex = word.getIndex();
                 }
 
-                rowIndex++;
+                if (pobIndex != -1) {
+                    if (word.getDepLabel().equals("nmod")) {
+                        dataRow.createCell(6).setCellValue(word.getDepLabel());
+                    }
+                }
             }
             rowIndex++;
         }
