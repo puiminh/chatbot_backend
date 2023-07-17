@@ -12,7 +12,8 @@ import org.springframework.data.mongodb.core.mapping.MongoId;
 import java.util.Date;
 
 @Setter
-@Getter@AllArgsConstructor
+@Getter
+@AllArgsConstructor
 @NoArgsConstructor
 @Document(collection = "messages")
 public class MessageDTO {
