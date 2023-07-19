@@ -7,7 +7,7 @@ import jakarta.validation.ConstraintViolationException;
 import java.io.IOException;
 
 public interface MessageService {
-    public void createMessage(MessageDTO messageDTO) throws ConstraintViolationException, MessageCollectionException;
+    public String createMessage(MessageDTO messageDTO) throws ConstraintViolationException, MessageCollectionException;
 
     public String analysisMessage(MessageDTO messageDTO) throws IOException;
 }

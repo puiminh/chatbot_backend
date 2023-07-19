@@ -39,8 +39,8 @@ public class MessageController {
     @PostMapping("/messages")
     public ResponseEntity<?> createMessage(@RequestBody MessageDTO message) {
         try {
-            messageService.createMessage(message);
-            return new ResponseEntity<MessageDTO>(message, HttpStatus.OK);
+            String res = messageService.createMessage(message);
+            return new ResponseEntity<>(res, HttpStatus.OK);
         } catch (ConstraintViolationException e) {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.UNPROCESSABLE_ENTITY);
         } catch (MessageCollectionException e) {
