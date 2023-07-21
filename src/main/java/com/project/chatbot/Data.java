@@ -1,6 +1,8 @@
 package com.project.chatbot;
 public class Data{
-    public String data = "Tôi muốn nâng cao từ vựng về phương tiện giao thông. " +
+    public String data = "" +
+            "Hẹn gặp lại! " +
+            "Tôi muốn nâng cao từ vựng về phương tiện giao thông. " +
             "Cho tôi học từ vựng về công nghệ thông tin. " +
             "Tôi muốn tìm hiểu từ vựng về thể thao. " +
             "Hãy giúp tôi học từ vựng về du lịch. " +

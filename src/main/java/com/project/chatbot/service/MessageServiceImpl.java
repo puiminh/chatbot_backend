@@ -31,7 +31,11 @@ public class MessageServiceImpl implements MessageService{
         messageDTO.setTimestamp(new Date(System.currentTimeMillis()));
         messageRepository.save(messageDTO);
 
-        return Logic.getResponse(messageDTO.getContent());
+        try {
+            return Logic.getResponseNLP(messageDTO.getContent());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public String analysisMessage(MessageDTO messageDTO) throws IOException {

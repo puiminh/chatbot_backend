@@ -1,0 +1,1290 @@
+[
+  {
+    "term": "family",
+    "meaning": "gia đình",
+    "type": "noun",
+    "spelling": "/ˈfæm.əl.i/",
+    "example": ["She comes from a large family with six siblings.", "Family is the most important thing in my life."],
+    "tag": [0]
+  },
+  {
+    "term": "dog",
+    "meaning": "chó",
+    "type": "noun",
+    "spelling": "/dɒɡ/",
+    "example": ["I have a pet dog named Max.", "Dogs are loyal and loving animals."],
+    "tag": [1]
+  },
+  {
+    "term": "rose",
+    "meaning": "hoa hồng",
+    "type": "noun",
+    "spelling": "/roʊz/",
+    "example": ["He gave her a bouquet of red roses.", "The rose is a symbol of love and romance."],
+    "tag": [2]
+  },
+  {
+    "term": "sunny",
+    "meaning": "nắng, trời nắng",
+    "type": "adjective",
+    "spelling": "/ˈsʌn.i/",
+    "example": ["It's a sunny day, perfect for a picnic.", "The weather forecast says it will be sunny all week."],
+    "tag": [3]
+  },
+  {
+    "term": "pizza",
+    "meaning": "bánh pizza",
+    "type": "noun",
+    "spelling": "/ˈpiːt.sə/",
+    "example": ["Let's order a large pizza with extra cheese.", "Pizza is one of the most popular foods in the world."],
+    "tag": [4]
+  },
+  {
+    "term": "coffee",
+    "meaning": "cà phê",
+    "type": "noun",
+    "spelling": "/ˈkɒf.i/",
+    "example": ["I start my day with a cup of coffee.", "Do you prefer black coffee or coffee with milk?"],
+    "tag": [5]
+  },
+  {
+    "term": "Monday",
+    "meaning": "thứ Hai",
+    "type": "noun",
+    "spelling": "/ˈmʌn.deɪ/",
+    "example": ["We have a meeting scheduled for Monday morning.", "Monday is the first day of the workweek."],
+    "tag": [6]
+  },
+  {
+    "term": "football",
+    "meaning": "bóng đá",
+    "type": "noun",
+    "spelling": "/ˈfʊt.bɑːl/",
+    "example": ["He enjoys playing football with his friends.", "Football is a popular sport around the world."],
+    "tag": [7]
+  },
+  {
+    "term": "beach",
+    "meaning": "bãi biển",
+    "type": "noun",
+    "spelling": "/biːtʃ/",
+    "example": ["We spent the day relaxing on the beach.", "The beach is crowded with tourists during the summer."],
+    "tag": [8]
+  },
+  {
+    "term": "car",
+    "meaning": "xe hơi",
+    "type": "noun",
+    "spelling": "/kɑːr/",
+    "example": ["I drive a red car.", "He bought a new car last month."],
+    "tag": [9]
+  },
+  {
+    "term": "computer",
+    "meaning": "máy tính",
+    "type": "noun",
+    "spelling": "/kəmˈpjuː.tər/",
+    "example": ["I use my computer for work and entertainment.", "Computers have revolutionized the way we live."],
+    "tag": [10]
+  },
+  {
+    "term": "forest",
+    "meaning": "rừng",
+    "type": "noun",
+    "spelling": "/ˈfɔːr.ɪst/",
+    "example": ["We went camping in the forest.", "The forest is home to a diverse range of wildlife."],
+    "tag": [11]
+  },
+  {
+    "term": "doctor",
+    "meaning": "bác sĩ",
+    "type": "noun",
+    "spelling": "/ˈdɑːk.tər/",
+    "example": ["The doctor examined the patient and prescribed medication.", "My sister is training to become a doctor."],
+    "tag": [12]
+  },
+  {
+    "term": "book",
+    "meaning": "sách",
+    "type": "noun",
+    "spelling": "/bʊk/",
+    "example": ["I love reading books in my free time.", "He borrowed a book from the library."],
+    "tag": [13]
+  },
+  {
+    "term": "painting",
+    "meaning": "bức tranh",
+    "type": "noun",
+    "spelling": "/ˈpeɪn.tɪŋ/",
+    "example": ["The museum has a collection of famous paintings.", "She enjoys creating beautiful paintings."],
+    "tag": [14]
+  },
+  {
+    "term": "song",
+    "meaning": "bài hát",
+    "type": "noun",
+    "spelling": "/sɒŋ/",
+    "example": ["The singer performed her latest song.", "This song always brings back memories of my childhood."],
+    "tag": [15]
+  },
+  {
+    "term": "tradition",
+    "meaning": "truyền thống",
+    "type": "noun",
+    "spelling": "/trəˈdɪʃ.ən/",
+    "example": ["They celebrate this tradition every year.", "Respecting traditions is an important part of their culture."],
+    "tag": [16]
+  },
+  {
+    "term": "business",
+    "meaning": "kinh doanh",
+    "type": "noun",
+    "spelling": "/ˈbɪznəs/",
+    "example": ["He runs a successful business.", "Businesses often face challenges and competition."],
+    "tag": [17]
+  },
+  {
+    "term": "shopping",
+    "meaning": "mua sắm",
+    "type": "noun",
+    "spelling": "/ˈʃɒp.ɪŋ/",
+    "example": ["She enjoys shopping for clothes and accessories.", "The mall is a popular destination for shopping."],
+    "tag": [18]
+  },
+  {
+    "term": "friend",
+    "meaning": "bạn bè",
+    "type": "noun",
+    "spelling": "/frend/",
+    "example": ["He is my best friend.", "She has a close circle of friends."],
+    "tag": [19]
+  },
+  {
+    "term": "government",
+    "meaning": "chính phủ",
+    "type": "noun",
+    "spelling": "/ˈɡʌv.ər.nənt/",
+    "example": ["The government is responsible for making and enforcing laws.", "The election will determine the new government leaders."],
+    "tag": [20]
+  },
+  {
+    "term": "cat",
+    "meaning": "mèo",
+    "type": "noun",
+    "spelling": "/kæt/",
+    "example": ["The cat is sleeping on the windowsill.", "Cats are independent and curious animals."],
+    "tag": [1]
+  },
+  {
+    "term": "sunflower",
+    "meaning": "hoa hướng dương",
+    "type": "noun",
+    "spelling": "/ˈsʌn.faʊ.ər/",
+    "example": ["The sunflower blooms in the summer.", "Sunflowers are known for turning toward the sun."],
+    "tag": [2]
+  },
+  {
+    "term": "cloudy",
+    "meaning": "có mây, trời có mây",
+    "type": "adjective",
+    "spelling": "/ˈklaʊ.di/",
+    "example": ["It's a cloudy day, and rain is expected.", "The weather can change from sunny to cloudy quickly."],
+    "tag": [3]
+  },
+  {
+    "term": "pasta",
+    "meaning": "mì ống, mỳ ý",
+    "type": "noun",
+    "spelling": "/ˈpæs.tə/",
+    "example": ["She made a delicious pasta dish for dinner.", "Pasta is a staple food in Italian cuisine."],
+    "tag": [4]
+  },
+  {
+    "term": "tea",
+    "meaning": "trà",
+    "type": "noun",
+    "spelling": "/tiː/",
+    "example": ["I like to drink green tea in the morning.", "Would you like a cup of tea?"],
+    "tag": [5]
+  },
+  {
+    "term": "Tuesday",
+    "meaning": "thứ Ba",
+    "type": "noun",
+    "spelling": "/ˈtjuːz.deɪ/",
+    "example": ["We have a presentation scheduled for Tuesday afternoon.", "Tuesday is the second day of the workweek."],
+    "tag": [6]
+  },
+  {
+    "term": "basketball",
+    "meaning": "bóng rổ",
+    "type": "noun",
+    "spelling": "/ˈbæs.kɪt.bɑːl/",
+    "example": ["He enjoys playing basketball with his classmates.", "Basketball is a fast-paced and exciting sport."],
+    "tag": [7]
+  },
+  {
+    "term": "ocean",
+    "meaning": "đại dương",
+    "type": "noun",
+    "spelling": "/ˈoʊ.ʃən/",
+    "example": ["They went on a cruise to explore the ocean.", "The ocean is home to a wide variety of marine life."],
+    "tag": [8]
+  },
+  {
+    "term": "bus",
+    "meaning": "xe buýt",
+    "type": "noun",
+    "spelling": "/bʌs/",
+    "example": ["I take the bus to work every day.", "The bus stop is just around the corner."],
+    "tag": [9]
+  },
+  {
+    "term": "phone",
+    "meaning": "điện thoại",
+    "type": "noun",
+    "spelling": "/foʊn/",
+    "example": ["She always keeps her phone with her.", "Smartphones have many useful features."],
+    "tag": [10]
+  },
+  {
+    "term": "mountain",
+    "meaning": "núi",
+    "type": "noun",
+    "spelling": "/ˈmaʊn.tən/",
+    "example": ["They climbed to the top of the mountain.", "Mountains offer breathtaking views of the landscape."],
+    "tag": [11]
+  },
+  {
+    "term": "nurse",
+    "meaning": "y tá",
+    "type": "noun",
+    "spelling": "/nɜːrs/",
+    "example": ["The nurse took care of the patients in the hospital.", "My cousin is studying to become a nurse."],
+    "tag": [12]
+  },
+  {
+    "term": "novel",
+    "meaning": "tiểu thuyết",
+    "type": "noun",
+    "spelling": "/ˈnɑː.vəl/",
+    "example": ["She enjoys reading mystery novels.", "The novel was adapted into a successful movie."],
+    "tag": [13]
+  },
+  {
+    "term": "sculpture",
+    "meaning": "bức tượng điêu khắc",
+    "type": "noun",
+    "spelling": "/ˈskʌlp.tʃər/",
+    "example": ["The museum has a collection of ancient sculptures.", "The artist created a beautiful sculpture from marble."],
+    "tag": [14]
+  },
+  {
+    "term": "concert",
+    "meaning": "buổi hòa nhạc",
+    "type": "noun",
+    "spelling": "/ˈkɑːn.sɜːrt/",
+    "example": ["They attended a rock concert last night.", "The concert featured performances by various musicians."],
+    "tag": [15]
+  },
+  {
+    "term": "custom",
+    "meaning": "phong tục, phong tục tập quán",
+    "type": "noun",
+    "spelling": "/ˈkʌs.təm/",
+    "example": ["It's a custom to exchange gifts during the holiday season.", "Each country has its own unique customs and traditions."],
+    "tag": [16]
+  },
+  {
+    "term": "company",
+    "meaning": "công ty, công ty hàng đầu",
+    "type": "noun",
+    "spelling": "/ˈkʌm.pə.ni/",
+    "example": ["She works for a multinational company.", "The company is known for its innovative products."],
+    "tag": [17]
+  },
+  {
+    "term": "mall",
+    "meaning": "trung tâm thương mại",
+    "type": "noun",
+    "spelling": "/mɑːl/",
+    "example": ["They went shopping at the mall on the weekend.", "The mall has a wide selection of stores and restaurants."],
+    "tag": [18]
+  },
+  {
+    "term": "classmate",
+    "meaning": "bạn cùng lớp",
+    "type": "noun",
+    "spelling": "/ˈklæs.meɪt/",
+    "example": ["He enjoys studying with his classmates.", "She made many friends among her classmates."],
+    "tag": [19]
+  },
+  {
+    "term": "president",
+    "meaning": "tổng thống",
+    "type": "noun",
+    "spelling": "/ˈprez.ɪ.dənt/",
+    "example": ["The president addressed the nation in a televised speech.", "The election will determine the next president of the country."],
+    "tag": [20]
+  },
+  {
+    "term": "elephant",
+    "meaning": "voi",
+    "type": "noun",
+    "spelling": "/ˈel.ə.fənt/",
+    "example": ["Elephants are the largest land animals.", "The elephant's trunk is a versatile and powerful tool."],
+    "tag": [1]
+  },
+  {
+    "term": "tulip",
+    "meaning": "hoa tulip",
+    "type": "noun",
+    "spelling": "/ˈtuː.lɪp/",
+    "example": ["The garden is full of colorful tulips.", "Tulips are a popular flower in the spring."],
+    "tag": [2]
+  },
+  {
+    "term": "rainy",
+    "meaning": "có mưa, trời mưa",
+    "type": "adjective",
+    "spelling": "/ˈreɪ.ni/",
+    "example": ["It's a rainy day, don't forget your umbrella.", "Rainy weather is common during the monsoon season."],
+    "tag": [3]
+  },
+  {
+    "term": "spaghetti",
+    "meaning": "mỳ Ý, mì Ý",
+    "type": "noun",
+    "spelling": "/spəˈɡet.i/",
+    "example": ["I love eating spaghetti with tomato sauce.", "Spaghetti is a popular Italian dish."],
+    "tag": [4]
+  },
+  {
+    "term": "juice",
+    "meaning": "nước trái cây",
+    "type": "noun",
+    "spelling": "/dʒuːs/",
+    "example": ["She likes to drink orange juice in the morning.", "Freshly squeezed juice is healthy and refreshing."],
+    "tag": [5]
+  },
+  {
+    "term": "Wednesday",
+    "meaning": "thứ Tư",
+    "type": "noun",
+    "spelling": "/ˈwɛnz.deɪ/",
+    "example": ["We have a team meeting scheduled for Wednesday afternoon.", "Wednesday is the third day of the workweek."],
+    "tag": [6]
+  },
+  {
+    "term": "baseball",
+    "meaning": "bóng chày",
+    "type": "noun",
+    "spelling": "/ˈbeɪs.bɔːl/",
+    "example": ["He enjoys playing baseball with his friends.", "Baseball is a popular sport in the United States."],
+    "tag": [7]
+  },
+  {
+    "term": "river",
+    "meaning": "sông",
+    "type": "noun",
+    "spelling": "/ˈrɪv.ər/",
+    "example": ["The river flows through the city.", "The Amazon River is the longest river in the world."],
+    "tag": [8]
+  },
+  {
+    "term": "bicycle",
+    "meaning": "xe đạp",
+    "type": "noun",
+    "spelling": "/ˈbaɪ.sɪ.kəl/",
+    "example": ["She rides her bicycle to school every day.", "Bicycles are a popular mode of transportation in many cities."],
+    "tag": [9]
+  },
+  {
+    "term": "tablet",
+    "meaning": "máy tính bảng",
+    "type": "noun",
+    "spelling": "/ˈtæb.lɪt/",
+    "example": ["He uses a tablet for reading ebooks and watching videos.", "Tablets are portable and convenient devices."],
+    "tag": [10]
+  },
+  {
+    "term": "desert",
+    "meaning": "sa mạc",
+    "type": "noun",
+    "spelling": "/ˈdez.ərt/",
+    "example": ["They went on an expedition to explore the desert.", "Deserts are characterized by arid and sandy landscapes."],
+    "tag": [11]
+  },
+  {
+    "term": "dentist",
+    "meaning": "nha sĩ",
+    "type": "noun",
+    "spelling": "/ˈden.tɪst/",
+    "example": ["She went to the dentist for a check-up.", "The dentist recommended regular brushing and flossing."],
+    "tag": [12]
+  },
+  {
+    "term": "dictionary",
+    "meaning": "từ điển",
+    "type": "noun",
+    "spelling": "/ˈdɪk.ʃən.er.i/",
+    "example": ["I often use an English dictionary to look up new words.", "The dictionary provides definitions and pronunciations of words."],
+    "tag": [13]
+  },
+  {
+    "term": "statue",
+    "meaning": "tượng",
+    "type": "noun",
+    "spelling": "/ˈstætʃ.uː/",
+    "example": ["The park has a statue of a famous historical figure.", "The statue was erected in honor of a great leader."],
+    "tag": [14]
+  },
+  {
+    "term": "concert",
+    "meaning": "buổi hòa nhạc",
+    "type": "noun",
+    "spelling": "/ˈkɑːn.sɜːrt/",
+    "example": ["They attended a classical concert at the theater.", "The concert featured a talented orchestra and soloists."],
+    "tag": [15]
+  },
+  {
+    "term": "ritual",
+    "meaning": "nghi thức, nghi lễ",
+    "type": "noun",
+    "spelling": "/ˈrɪtʃ.u.əl/",
+    "example": ["The wedding ceremony included various traditional rituals.", "Rituals are performed to mark important events and occasions."],
+    "tag": [16]
+  },
+  {
+    "term": "industry",
+    "meaning": "ngành công nghiệp",
+    "type": "noun",
+    "spelling": "/ˈɪn.də.stri/",
+    "example": ["The automotive industry produces millions of vehicles each year.", "The country's economy relies on several key industries."],
+    "tag": [17]
+  },
+  {
+    "term": "market",
+    "meaning": "chợ, thị trường",
+    "type": "noun",
+    "spelling": "/ˈmɑːr.kɪt/",
+    "example": ["They went to the local market to buy fresh produce.", "The real estate market is experiencing a boom."],
+    "tag": [18]
+  },
+  {
+    "term": "neighbor",
+    "meaning": "hàng xóm",
+    "type": "noun",
+    "spelling": "/ˈneɪ.bɚ/",
+    "example": ["We have friendly neighbors who always lend a helping hand.", "She often chats with her neighbors over the fence."],
+    "tag": [19]
+  },
+  {
+    "term": "prime minister",
+    "meaning": "thủ tướng",
+    "type": "noun",
+    "spelling": "/ˌpraɪm ˈmɪn.ɪ.stər/",
+    "example": ["The prime minister addressed the nation in a televised speech.", "The prime minister's term in office will end next year."],
+    "tag": [20]
+  },
+  {
+    "term": "giraffe",
+    "meaning": "hươu cao cổ",
+    "type": "noun",
+    "spelling": "/dʒɪˈræf/",
+    "example": ["Giraffes are known for their long necks and legs.", "The giraffe is the tallest land animal in the world."],
+    "tag": [1]
+  },
+  {
+    "term": "daisy",
+    "meaning": "hoa cúc",
+    "type": "noun",
+    "spelling": "/ˈdeɪ.zi/",
+    "example": ["The field is covered with daisies.", "Daisies are small and cheerful flowers."],
+    "tag": [2]
+  },
+  {
+    "term": "stormy",
+    "meaning": "có bão, trời có bão",
+    "type": "adjective",
+    "spelling": "/ˈstɔːr.mi/",
+    "example": ["It's a stormy night with thunder and lightning.", "Stormy weather can cause power outages and damage."],
+    "tag": [3]
+  },
+  {
+    "term": "burger",
+    "meaning": "bánh burger",
+    "type": "noun",
+    "spelling": "/ˈbɜːr.ɡər/",
+    "example": ["He ordered a cheeseburger and fries at the restaurant.", "Burgers are a popular fast food choice."],
+    "tag": [4]
+  },
+  {
+    "term": "water",
+    "meaning": "nước",
+    "type": "noun",
+    "spelling": "/ˈwɑː.t̬ɚ/",
+    "example": ["Water is essential for all living organisms.", "She drank a glass of cold water to quench her thirst."],
+    "tag": [5]
+  },
+  {
+    "term": "Thursday",
+    "meaning": "thứ Năm",
+    "type": "noun",
+    "spelling": "/ˈθɝːz.deɪ/",
+    "example": ["We have a team meeting scheduled for Thursday morning.", "Thursday is the fourth day of the workweek."],
+    "tag": [6]
+  },
+  {
+    "term": "tennis",
+    "meaning": "quần vợt",
+    "type": "noun",
+    "spelling": "/ˈten.ɪs/",
+    "example": ["She enjoys playing tennis with her friends.", "Tennis is a popular sport played on a rectangular court."],
+    "tag": [7]
+  },
+  {
+    "term": "lake",
+    "meaning": "hồ",
+    "type": "noun",
+    "spelling": "/leɪk/",
+    "example": ["They went fishing at the lake.", "The lake is surrounded by beautiful mountains."],
+    "tag": [8]
+  },
+  {
+    "term": "train",
+    "meaning": "tàu hỏa",
+    "type": "noun",
+    "spelling": "/treɪn/",
+    "example": ["He takes the train to work every day.", "The high-speed train makes the journey faster and more comfortable."],
+    "tag": [9]
+  },
+  {
+    "term": "camera",
+    "meaning": "máy ảnh",
+    "type": "noun",
+    "spelling": "/ˈkæm.rə/",
+    "example": ["She enjoys taking photos with her camera.", "The camera has a high-resolution display for viewing images."],
+    "tag": [10]
+  },
+  {
+    "term": "canyon",
+    "meaning": "hẻm núi",
+    "type": "noun",
+    "spelling": "/ˈkæn.jən/",
+    "example": ["The Grand Canyon is a famous natural wonder.", "Canyons are formed by the erosion of rock over millions of years."],
+    "tag": [11]
+  },
+  {
+    "term": "pharmacist",
+    "meaning": "dược sĩ",
+    "type": "noun",
+    "spelling": "/ˈfɑːr.mə.sɪst/",
+    "example": ["The pharmacist dispensed the prescribed medication.", "Pharmacists play a crucial role in healthcare."],
+    "tag": [12]
+  },
+  {
+    "term": "map",
+    "meaning": "bản đồ",
+    "type": "noun",
+    "spelling": "/mæp/",
+    "example": ["They used a map to navigate through the city.", "The map shows the locations of important landmarks and roads."],
+    "tag": [13]
+  },
+  {
+    "term": "statue",
+    "meaning": "tượng",
+    "type": "noun",
+    "spelling": "/ˈstætʃ.uː/",
+    "example": ["The city has a statue of its founder in the central square.", "The statue is made of bronze and stands on a marble base."],
+    "tag": [14]
+  },
+  {
+    "term": "opera",
+    "meaning": "buổi biểu diễn opera",
+    "type": "noun",
+    "spelling": "/ˈɑː.pɚ.ə/",
+    "example": ["They attended a famous opera performance at the theater.", "Opera is a form of art that combines music, singing, and drama."],
+    "tag": [15]
+  },
+  {
+    "term": "belief",
+    "meaning": "niềm tin",
+    "type": "noun",
+    "spelling": "/bɪˈliːf/",
+    "example": ["Different cultures have their own unique beliefs and traditions.", "Her strong belief in herself helped her overcome challenges."],
+    "tag": [16]
+  },
+  {
+    "term": "technology",
+    "meaning": "công nghệ",
+    "type": "noun",
+    "spelling": "/tekˈnɑː.lə.dʒi/",
+    "example": ["Advancements in technology have transformed various industries.", "The company invests heavily in research and development of new technologies."],
+    "tag": [17]
+  },
+  {
+    "term": "grocery",
+    "meaning": "cửa hàng tạp hóa",
+    "type": "noun",
+    "spelling": "/ˈɡroʊ.sər.i/",
+    "example": ["She went to the grocery store to buy some food.", "Grocery shopping is a regular household activity."],
+    "tag": [18]
+  },
+  {
+    "term": "roommate",
+    "meaning": "bạn cùng phòng",
+    "type": "noun",
+    "spelling": "/ˈruːm.meɪt/",
+    "example": ["He shares an apartment with two roommates.", "Her roommate is friendly and easy to get along with."],
+    "tag": [19]
+  },
+  {
+    "term": "parliament",
+    "meaning": "quốc hội",
+    "type": "noun",
+    "spelling": "/ˈpɑːr.lə.mənt/",
+    "example": ["Members of parliament debate and pass laws.", "The prime minister addressed the parliament on important matters."],
+    "tag": [20]
+  },
+  {
+    "term": "zebra",
+    "meaning": "ngựa vằn",
+    "type": "noun",
+    "spelling": "/ˈziː.brə/",
+    "example": ["Zebras have distinctive black and white stripes.", "The zebra is a herbivorous animal found in Africa."],
+    "tag": [1]
+  },
+  {
+    "term": "daffodil",
+    "meaning": "hoa thủy tiên",
+    "type": "noun",
+    "spelling": "/ˈdæf.ə.dɪl/",
+    "example": ["The garden is blooming with daffodils in the spring.", "Daffodils are bright yellow flowers with trumpet-shaped petals."],
+    "tag": [2]
+  },
+  {
+    "term": "windy",
+    "meaning": "có gió, trời có gió",
+    "type": "adjective",
+    "spelling": "/ˈwɪn.di/",
+    "example": ["It's a windy day, and the leaves are blowing in the breeze.", "Windy weather can make it feel cooler than the actual temperature."],
+    "tag": [3]
+  },
+  {
+    "term": "sandwich",
+    "meaning": "bánh sandwich",
+    "type": "noun",
+    "spelling": "/ˈsæn.wɪtʃ/",
+    "example": ["She made a ham and cheese sandwich for lunch.", "Sandwiches are a convenient and portable meal option."],
+    "tag": [4]
+  },
+  {
+    "term": "soda",
+    "meaning": "nước ngọt, nước soda",
+    "type": "noun",
+    "spelling": "/ˈsoʊ.də/",
+    "example": ["I prefer drinking water over soda.", "Soda is a carbonated beverage with various flavors."],
+    "tag": [5]
+  },
+  {
+    "term": "Friday",
+    "meaning": "thứ Sáu",
+    "type": "noun",
+    "spelling": "/ˈfraɪ.deɪ/",
+    "example": ["We have a team outing scheduled for Friday evening.", "Friday is the fifth day of the workweek."],
+    "tag": [6]
+  },
+  {
+    "term": "swimming",
+    "meaning": "bơi lội",
+    "type": "noun",
+    "spelling": "/ˈswɪm.ɪŋ/",
+    "example": ["She enjoys swimming in the pool on hot summer days.", "Swimming is a great form of exercise and relaxation."],
+    "tag": [7]
+  },
+  {
+    "term": "island",
+    "meaning": "hòn đảo",
+    "type": "noun",
+    "spelling": "/ˈaɪ.lənd/",
+    "example": ["They went on a vacation to a tropical island.", "The island is surrounded by crystal-clear waters."],
+    "tag": [8]
+  },
+  {
+    "term": "motorcycle",
+    "meaning": "xe máy",
+    "type": "noun",
+    "spelling": "/ˈmoʊ.t̬ɚ.saɪ.kəl/",
+    "example": ["He prefers riding a motorcycle to commuting by car.", "Motorcycles are a popular mode of transportation in some countries."],
+    "tag": [9]
+  },
+  {
+    "term": "camera",
+    "meaning": "máy ảnh",
+    "type": "noun",
+    "spelling": "/ˈkæm.rə/",
+    "example": ["She loves capturing memories with her camera.", "The camera's lens can zoom in for close-up shots."],
+    "tag": [10]
+  },
+  {
+    "term": "volcano",
+    "meaning": "núi lửa",
+    "type": "noun",
+    "spelling": "/vɑːlˈkeɪ.noʊ/",
+    "example": ["The volcano erupted, sending ash and lava into the sky.", "Volcanoes are often found along tectonic plate boundaries."],
+    "tag": [11]
+  },
+  {
+    "term": "pharmacist",
+    "meaning": "dược sĩ",
+    "type": "noun",
+    "spelling": "/ˈfɑːr.mə.sɪst/",
+    "example": ["The pharmacist dispensed the prescribed medication.", "Pharmacists play a crucial role in healthcare."],
+    "tag": [12]
+  },
+  {
+    "term": "dictionary",
+    "meaning": "từ điển",
+    "type": "noun",
+    "spelling": "/ˈdɪk.ʃən.er.i/",
+    "example": ["I often use a dictionary to look up new words.", "The dictionary provides definitions and pronunciations of words."],
+    "tag": [13]
+  },
+  {
+    "term": "sculpture",
+    "meaning": "bức tượng điêu khắc",
+    "type": "noun",
+    "spelling": "/ˈskʌlp.tʃər/",
+    "example": ["The museum has a collection of ancient sculptures.", "The artist created a stunning sculpture from marble."],
+    "tag": [14]
+  },
+  {
+    "term": "ballet",
+    "meaning": "buổi biểu diễn ballet",
+    "type": "noun",
+    "spelling": "/ˈbæleɪ/",
+    "example": ["They attended a ballet performance at the theater.", "Ballet is a graceful and expressive form of dance."],
+    "tag": [15]
+  },
+  {
+    "term": "faith",
+    "meaning": "đức tin, niềm tin",
+    "type": "noun",
+    "spelling": "/feɪθ/",
+    "example": ["She has unwavering faith in her abilities.", "Faith can provide strength and comfort during difficult times."],
+    "tag": [16]
+  },
+  {
+    "term": "internet",
+    "meaning": "internet",
+    "type": "noun",
+    "spelling": "/ˈɪn.tɚ.net/",
+    "example": ["The internet has revolutionized communication and access to information.", "The company offers high-speed internet services."],
+    "tag": [17]
+  },
+  {
+    "term": "bakery",
+    "meaning": "tiệm bánh",
+    "type": "noun",
+    "spelling": "/ˈbeɪ.kər.i/",
+    "example": ["They bought fresh bread from the bakery.", "The bakery sells a variety of delicious pastries and cakes."],
+    "tag": [18]
+  },
+  {
+    "term": "colleague",
+    "meaning": "đồng nghiệp",
+    "type": "noun",
+    "spelling": "/ˈkɑː.liːɡ/",
+    "example": ["He gets along well with his colleagues at work.", "Her colleague offered to help with the project."],
+    "tag": [19]
+  },
+  {
+    "term": "king",
+    "meaning": "vua",
+    "type": "noun",
+    "spelling": "/kɪŋ/",
+    "example": ["The king ruled the kingdom with wisdom and fairness.", "The country celebrated the coronation of its new king."],
+    "tag": [20]
+  },
+  {
+    "term": "penguin",
+    "meaning": "chim cánh cụt",
+    "type": "noun",
+    "spelling": "/ˈpɛŋ.ɡwɪn/",
+    "example": ["Penguins are flightless birds that live in Antarctica.", "The penguin's black and white plumage provides camouflage in the water."],
+    "tag": [1]
+  },
+  {
+    "term": "orchid",
+    "meaning": "hoa lan",
+    "type": "noun",
+    "spelling": "/ˈɔːr.kɪd/",
+    "example": ["She received a beautiful orchid as a gift.", "Orchids are known for their vibrant colors and intricate patterns."],
+    "tag": [2]
+  },
+  {
+    "term": "cloudy",
+    "meaning": "có mây, trời có mây",
+    "type": "adjective",
+    "spelling": "/ˈklaʊ.di/",
+    "example": ["It's a cloudy day, and rain is expected later.", "The weather forecast predicts a cloudy week."],
+    "tag": [3]
+  },
+  {
+    "term": "pizza",
+    "meaning": "bánh pizza",
+    "type": "noun",
+    "spelling": "/ˈpiː.t̬sə/",
+    "example": ["They ordered a large pizza with their favorite toppings.", "Pizza is a popular Italian dish enjoyed worldwide."],
+    "tag": [4]
+  },
+  {
+    "term": "coffee",
+    "meaning": "cà phê",
+    "type": "noun",
+    "spelling": "/ˈkɑː.fi/",
+    "example": ["She starts her day with a cup of coffee.", "Coffee beans are roasted and ground to make coffee."],
+    "tag": [5]
+  },
+  {
+    "term": "Saturday",
+    "meaning": "thứ Bảy",
+    "type": "noun",
+    "spelling": "/ˈsæt̬.ɚ.deɪ/",
+    "example": ["They have a family outing planned for Saturday.", "Saturday is the sixth day of the week."],
+    "tag": [6]
+  },
+  {
+    "term": "football",
+    "meaning": "bóng đá, bóng bầu dục",
+    "type": "noun",
+    "spelling": "/ˈfʊt.bɑːl/",
+    "example": ["He plays football with his friends every weekend.", "Football is a widely popular sport with a global fanbase."],
+    "tag": [7]
+  },
+  {
+    "term": "oasis",
+    "meaning": "ốc đảo, vùng đất ốc đảo",
+    "type": "noun",
+    "spelling": "/oʊˈeɪ.sɪs/",
+    "example": ["The oasis provided a refreshing respite in the middle of the desert.", "Oases are essential for wildlife in arid regions."],
+    "tag": [8]
+  },
+  {
+    "term": "car",
+    "meaning": "xe ô tô",
+    "type": "noun",
+    "spelling": "/kɑːr/",
+    "example": ["She drives a car to work every day.", "The car's engine is fuel-efficient and powerful."],
+    "tag": [9]
+  },
+  {
+    "term": "smartphone",
+    "meaning": "điện thoại thông minh",
+    "type": "noun",
+    "spelling": "/ˈsmɑːrt.foʊn/",
+    "example": ["Smartphones have become essential devices in modern life.", "She uses her smartphone for various tasks, from communication to entertainment."],
+    "tag": [10]
+  },
+  {
+    "term": "canyon",
+    "meaning": "hẻm núi",
+    "type": "noun",
+    "spelling": "/ˈkæn.jən/",
+    "example": ["The Grand Canyon is a famous natural wonder.", "Canyons are formed by the erosion of rock over millions of years."],
+    "tag": [11]
+  },
+  {
+    "term": "doctor",
+    "meaning": "bác sĩ",
+    "type": "noun",
+    "spelling": "/ˈdɑːk.tɚ/",
+    "example": ["The doctor examined the patient and prescribed medication.", "My sister aspires to become a doctor and help others."],
+    "tag": [12]
+  },
+  {
+    "term": "book",
+    "meaning": "sách",
+    "type": "noun",
+    "spelling": "/bʊk/",
+    "example": ["She loves reading books in her free time.", "The library has a wide selection of books for all ages."],
+    "tag": [13]
+  },
+  {
+    "term": "painting",
+    "meaning": "bức tranh, nghệ thuật vẽ",
+    "type": "noun",
+    "spelling": "/ˈpeɪn.tɪŋ/",
+    "example": ["The museum exhibits famous paintings by renowned artists.", "She enjoys creating abstract paintings using bold colors."],
+    "tag": [14]
+  },
+  {
+    "term": "concert",
+    "meaning": "buổi hòa nhạc",
+    "type": "noun",
+    "spelling": "/ˈkɑːn.sɜːrt/",
+    "example": ["They attended a rock concert at the stadium.", "The concert showcased talented musicians and performers."],
+    "tag": [15]
+  },
+  {
+    "term": "hope",
+    "meaning": "hy vọng",
+    "type": "noun",
+    "spelling": "/hoʊp/",
+    "example": ["He never lost hope, even in the most challenging times.", "Hope can provide motivation and strength in difficult situations."],
+    "tag": [16]
+  },
+  {
+    "term": "computer",
+    "meaning": "máy tính",
+    "type": "noun",
+    "spelling": "/kəmˈpjuː.t̬ɚ/",
+    "example": ["She uses a computer for work and leisure.", "Computers have revolutionized various aspects of modern life."],
+    "tag": [17]
+  },
+  {
+    "term": "bakery",
+    "meaning": "tiệm bánh",
+    "type": "noun",
+    "spelling": "/ˈbeɪ.kər.i/",
+    "example": ["They bought fresh bread from the bakery.", "The bakery sells a variety of delicious pastries and cakes."],
+    "tag": [18]
+  },
+  {
+    "term": "teacher",
+    "meaning": "giáo viên",
+    "type": "noun",
+    "spelling": "/ˈtiː.tʃɚ/",
+    "example": ["Her mother is a teacher at the local school.", "Teachers play a vital role in shaping young minds."],
+    "tag": [19]
+  },
+  {
+    "term": "queen",
+    "meaning": "nữ hoàng",
+    "type": "noun",
+    "spelling": "/kwiːn/",
+    "example": ["The queen addressed the nation in a televised speech.", "The queen's coronation was a grand ceremony."],
+    "tag": [20]
+  },
+  {
+    "term": "panda",
+    "meaning": "gấu trúc",
+    "type": "noun",
+    "spelling": "/ˈpæn.də/",
+    "example": ["Pandas are adorable bears native to China.", "The panda's diet primarily consists of bamboo leaves."],
+    "tag": [1]
+  },
+  {
+    "term": "sunflower",
+    "meaning": "hoa hướng dương",
+    "type": "noun",
+    "spelling": "/ˈsʌnˌflaʊ.ɚ/",
+    "example": ["The field is filled with vibrant sunflowers.", "Sunflowers are known for their heliotropic nature, following the sun's movement."],
+    "tag": [2]
+  },
+  {
+    "term": "sunny",
+    "meaning": "có nắng, trời có nắng",
+    "type": "adjective",
+    "spelling": "/ˈsʌn.i/",
+    "example": ["It's a sunny day, perfect for outdoor activities.", "Sunny weather can lift one's mood and boost vitamin D production."],
+    "tag": [3]
+  },
+  {
+    "term": "ice cream",
+    "meaning": "kem",
+    "type": "noun",
+    "spelling": "/ˈaɪs ˌkriːm/",
+    "example": ["They enjoyed delicious ice cream on a hot day.", "Ice cream comes in various flavors and toppings."],
+    "tag": [4]
+  },
+  {
+    "term": "tea",
+    "meaning": "trà",
+    "type": "noun",
+    "spelling": "/tiː/",
+    "example": ["She likes to drink tea with a little honey.", "Tea is a popular beverage enjoyed in many cultures."],
+    "tag": [5]
+  },
+  {
+    "term": "Sunday",
+    "meaning": "Chủ Nhật",
+    "type": "noun",
+    "spelling": "/ˈsʌn.deɪ/",
+    "example": ["They have a family gathering planned for Sunday afternoon.", "Sunday is the seventh day of the week and often considered a day of rest."],
+    "tag": [6]
+  },
+  {
+    "term": "basketball",
+    "meaning": "bóng rổ",
+    "type": "noun",
+    "spelling": "/ˈbæs.kɪt.bɑːl/",
+    "example": ["He plays basketball with his friends at the park.", "Basketball requires teamwork, skill, and strategy."],
+    "tag": [7]
+  },
+  {
+    "term": "beach",
+    "meaning": "bãi biển",
+    "type": "noun",
+    "spelling": "/biːtʃ/",
+    "example": ["They spent the day relaxing on the beach.", "The beach is a popular destination for vacationers."],
+    "tag": [8]
+  },
+  {
+    "term": "bus",
+    "meaning": "xe buýt",
+    "type": "noun",
+    "spelling": "/bʌs/",
+    "example": ["She takes the bus to school every morning.", "The bus is a convenient and affordable mode of public transportation."],
+    "tag": [9]
+  },
+  {
+    "term": "laptop",
+    "meaning": "máy tính xách tay",
+    "type": "noun",
+    "spelling": "/ˈlæp.tɑːp/",
+    "example": ["He uses a laptop for work and entertainment.", "Laptops are portable and versatile computing devices."],
+    "tag": [10]
+  },
+  {
+    "term": "waterfall",
+    "meaning": "thác nước",
+    "type": "noun",
+    "spelling": "/ˈwɑː.t̬ɚ.fɑːl/",
+    "example": ["They hiked to see the majestic waterfall.", "Waterfalls are natural wonders formed by flowing water."],
+    "tag": [11]
+  },
+  {
+    "term": "dentist",
+    "meaning": "nha sĩ",
+    "type": "noun",
+    "spelling": "/ˈdɛn.tɪst/",
+    "example": ["She went to the dentist for a routine check-up.", "The dentist recommended regular brushing and flossing."],
+    "tag": [12]
+  },
+  {
+    "term": "map",
+    "meaning": "bản đồ",
+    "type": "noun",
+    "spelling": "/mæp/",
+    "example": ["They used a map to navigate through the city.", "The map shows the locations of important landmarks and roads."],
+    "tag": [13]
+  },
+  {
+    "term": "garden",
+    "meaning": "vườn",
+    "type": "noun",
+    "spelling": "/ˈɡɑːr.dən/",
+    "example": ["She grows various flowers and vegetables in her garden.", "The garden is a peaceful and relaxing place to spend time."],
+    "tag": [14]
+  },
+  {
+    "term": "dance",
+    "meaning": "nhảy, khiêu vũ",
+    "type": "noun",
+    "spelling": "/dæns/",
+    "example": ["They took dance lessons to learn different styles.", "Dance is a form of artistic expression and physical activity."],
+    "tag": [15]
+  },
+  {
+    "term": "perseverance",
+    "meaning": "kiên nhẫn, sự kiên trì",
+    "type": "noun",
+    "spelling": "/ˌpɜːr.səˈvɪr.əns/",
+    "example": ["She achieved her goals through hard work and perseverance.", "Perseverance is essential for overcoming obstacles and achieving success."],
+    "tag": [16]
+  },
+  {
+    "term": "space",
+    "meaning": "không gian",
+    "type": "noun",
+    "spelling": "/speɪs/",
+    "example": ["Space exploration has led to significant scientific discoveries.", "The universe is vast, with countless stars and galaxies in space."],
+    "tag": [17]
+  },
+  {
+    "term": "cafe",
+    "meaning": "quán cà phê",
+    "type": "noun",
+    "spelling": "/ˈkæf.eɪ/",
+    "example": ["They meet at the cafe to catch up over coffee.", "The cafe offers a cozy and inviting atmosphere for customers."],
+    "tag": [18]
+  },
+  {
+    "term": "friend",
+    "meaning": "bạn bè",
+    "type": "noun",
+    "spelling": "/frend/",
+    "example": ["She values her friends and cherishes their friendship.", "He introduced his friend to the rest of the group."],
+    "tag": [19]
+  },
+  {
+    "term": "president",
+    "meaning": "tổng thống",
+    "type": "noun",
+    "spelling": "/ˈprez.ɪ.dənt/",
+    "example": ["The president addressed the nation in a televised speech.", "The president's term in office will end next year."],
+    "tag": [20]
+  },
+  {
+    "term": "tiger",
+    "meaning": "con hổ",
+    "type": "noun",
+    "spelling": "/ˈtaɪ.ɡɚ/",
+    "example": ["Tigers are majestic big cats known for their strength and agility.", "The tiger's distinctive orange and black stripes serve as camouflage in the wild."],
+    "tag": [1]
+  },
+  {
+    "term": "rose",
+    "meaning": "hoa hồng",
+    "type": "noun",
+    "spelling": "/roʊz/",
+    "example": ["He gave her a bouquet of red roses on Valentine's Day.", "Roses are often associated with love and romance."],
+    "tag": [2]
+  },
+  {
+    "term": "rainy",
+    "meaning": "có mưa, trời có mưa",
+    "type": "adjective",
+    "spelling": "/ˈreɪ.ni/",
+    "example": ["It's a rainy day, and they stayed indoors.", "Rainy weather is ideal for cozying up with a book or movie."],
+    "tag": [3]
+  },
+  {
+    "term": "cake",
+    "meaning": "bánh kem",
+    "type": "noun",
+    "spelling": "/keɪk/",
+    "example": ["She baked a delicious cake for her birthday.", "Cake is a popular dessert enjoyed on special occasions."],
+    "tag": [4]
+  },
+  {
+    "term": "juice",
+    "meaning": "nước trái cây",
+    "type": "noun",
+    "spelling": "/dʒuːs/",
+    "example": ["She prefers drinking fresh orange juice in the morning.", "Juice provides essential vitamins and nutrients."],
+    "tag": [5]
+  },
+  {
+    "term": "Monday",
+    "meaning": "thứ Hai",
+    "type": "noun",
+    "spelling": "/ˈmʌn.deɪ/",
+    "example": ["Monday marks the beginning of the workweek.", "They have a team meeting scheduled for Monday morning."],
+    "tag": [6]
+  },
+  {
+    "term": "volleyball",
+    "meaning": "bóng chuyền",
+    "type": "noun",
+    "spelling": "/ˈvɑː.li.bɑːl/",
+    "example": ["They play volleyball at the beach during the summer.", "Volleyball is a team sport that requires coordination and communication."],
+    "tag": [7]
+  },
+  {
+    "term": "mountain",
+    "meaning": "núi",
+    "type": "noun",
+    "spelling": "/ˈmaʊn.tən/",
+    "example": ["They went on a hiking trip to the mountains.", "Mountains offer breathtaking views and challenging terrain."],
+    "tag": [8]
+  },
+  {
+    "term": "bike",
+    "meaning": "xe đạp",
+    "type": "noun",
+    "spelling": "/baɪk/",
+    "example": ["He rides his bike to work every day.", "Biking is a healthy and eco-friendly mode of transportation."],
+    "tag": [9]
+  },
+  {
+    "term": "phone",
+    "meaning": "điện thoại",
+    "type": "noun",
+    "spelling": "/foʊn/",
+    "example": ["She uses her phone to stay connected with friends and family.", "Smartphones have replaced traditional phones in many households."],
+    "tag": [10]
+  },
+  {
+    "term": "river",
+    "meaning": "sông",
+    "type": "noun",
+    "spelling": "/ˈrɪv.ɚ/",
+    "example": ["They went for a boat ride on the river.", "Rivers are essential sources of water for various ecosystems."],
+    "tag": [11]
+  },
+  {
+    "term": "lawyer",
+    "meaning": "luật sư",
+    "type": "noun",
+    "spelling": "/ˈlɔɪ.ɚ/",
+    "example": ["Her father is a successful lawyer.", "Lawyers provide legal advice and represent clients in court."],
+    "tag": [12]
+  },
+  {
+    "term": "painting",
+    "meaning": "bức tranh, nghệ thuật vẽ",
+    "type": "noun",
+    "spelling": "/ˈpeɪn.tɪŋ/",
+    "example": ["The museum exhibits famous paintings by renowned artists.", "She enjoys creating abstract paintings using bold colors."],
+    "tag": [13]
+  },
+  {
+    "term": "ballet",
+    "meaning": "buổi biểu diễn ballet",
+    "type": "noun",
+    "spelling": "/ˈbæleɪ/",
+    "example": ["They attended a ballet performance at the theater.", "Ballet is a graceful and expressive form of dance."],
+    "tag": [14]
+  },
+  {
+    "term": "dream",
+    "meaning": "giấc mơ",
+    "type": "noun",
+    "spelling": "/driːm/",
+    "example": ["She had a vivid dream about flying.", "Dreams can be reflections of our subconscious thoughts and desires."],
+    "tag": [15]
+  },
+  {
+    "term": "ambition",
+    "meaning": "hoài bão, khát vọng",
+    "type": "noun",
+    "spelling": "/æmˈbɪʃ.ən/",
+    "example": ["He is determined to fulfill his ambition of becoming an astronaut.", "Ambition drives individuals to set and achieve challenging goals."],
+    "tag": [16]
+  },
+  {
+    "term": "universe",
+    "meaning": "vũ trụ",
+    "type": "noun",
+    "spelling": "/ˈjuː.nə.vɝːs/",
+    "example": ["The universe is vast and filled with countless stars and galaxies.", "Studying the universe helps scientists understand the cosmos."],
+    "tag": [17]
+  },
+  {
+    "term": "supermarket",
+    "meaning": "siêu thị",
+    "type": "noun",
+    "spelling": "/ˈsuː.pɚˌmɑːr.kɪt/",
+    "example": ["They buy groceries at the supermarket.", "Supermarkets offer a wide range of products and goods."],
+    "tag": [18]
+  },
+  {
+    "term": "family",
+    "meaning": "gia đình",
+    "type": "noun",
+    "spelling": "/ˈfæm.əl.i/",
+    "example": ["She enjoys spending quality time with her family.", "Family provides love, support, and a sense of belonging."],
+    "tag": [19]
+  },
+  {
+    "term": "prime minister",
+    "meaning": "thủ tướng",
+    "type": "noun",
+    "spelling": "/praɪm ˈmɪn.ɪ.stɚ/",
+    "example": ["The prime minister addressed the nation on important matters.", "The prime minister leads the government and is responsible for decision-making."],
+    "tag": [20]
+  }
+]

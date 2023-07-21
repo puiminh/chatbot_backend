@@ -1,0 +1,107 @@
+[
+  {
+    "id": 0,
+    "name": "family",
+    "keyword": ["gia_đình", "họ_hàng", "thành_viên_gia_đình"]
+  },
+  {
+    "id": 1,
+    "name": "animal",
+    "keyword": ["động_vật", "con_vật"]
+  },
+  {
+    "id": 2,
+    "name": "plant",
+    "keyword": ["thực_vật", "cây", "cây_cối"]
+  },
+  {
+    "id": 3,
+    "name": "weather_season",
+    "keyword": ["thời_tiết", "khí_trời", "mùa", "các_mùa"]
+  },
+  {
+    "id": 4,
+    "name": "food",
+    "keyword": ["thực_phẩm", "đồ_ăn", "món", "ăn"]
+  },
+  {
+    "id": 5,
+    "name": "drink",
+    "keyword": ["đồ_uống", "thức_uống", "nước_uống"]
+  },
+  {
+    "id": 6,
+    "name": "time",
+    "keyword": ["thời_gian", "ngày_tháng"]
+  },
+  {
+    "id": 7,
+    "name": "sports",
+    "keyword": ["thể_thao"]
+  },
+  {
+    "id": 8,
+    "name": "travel",
+    "keyword": ["du_lịch", "danh_lam", "thắng_cảnh", "quang_cảnh"]
+  },
+  {
+    "id": 9,
+    "name": "transportation",
+    "keyword": ["xe_cộ", "phương_tiện", "giao_thông", "di_chuyển"]
+  },
+  {
+    "id": 10,
+    "name": "technology",
+    "keyword": ["kỹ_thuật", "công_nghệ", "điện_tử", "thiết_bị"]
+  },
+  {
+    "id": 11,
+    "name": "environment",
+    "keyword": ["môi_trường", "thiên_nhiên", "tài nguyên"]
+  },
+  {
+    "id": 12,
+    "name": "health",
+    "keyword": ["y_tế", "bệnh_tật", "sức_khỏe", "y_học", "bệnh", "bệnh viện"]
+  },
+  {
+    "id": 13,
+    "name": "education",
+    "keyword": ["học_tập", "giáo_dục", "học_hành", "môn_học"]
+  },
+  {
+    "id": 14,
+    "name": "art",
+    "keyword": ["nghệ_thuật", "vẽ", "tranh_ảnh"]
+  },
+  {
+    "id": 15,
+    "name": "music",
+    "keyword": ["âm_nhạc", "ca_nhạc", "bài_hát", "ca_sĩ"]
+  },
+  {
+    "id": 16,
+    "name": "culture",
+    "keyword": ["văn_hóa", "phong_tục", "tập_quán"]
+  },
+  {
+    "id": 17,
+    "name": "business",
+    "keyword": ["kinh_doanh", "tài_chính", "làm_ăn"]
+  },
+  {
+    "id": 18,
+    "name": "commerce",
+    "keyword": ["thương_mại", "mua_sắm"]
+  },
+  {
+    "id": 19,
+    "name": "society",
+    "keyword": ["xã_hội", "quan_hệ", "con_người"]
+  },
+  {
+    "id": 20,
+    "name": "politic",
+    "keyword": ["chính_trị"]
+  }
+]

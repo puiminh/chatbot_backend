@@ -1,8 +1,17 @@
 package com.project.chatbot.logic;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import com.project.chatbot.Data;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import vn.pipeline.Annotation;
+import vn.pipeline.Sentence;
+import vn.pipeline.VnCoreNLP;
+import vn.pipeline.Word;
+
+import java.io.IOException;
+import java.util.*;
+
 public class Logic {
 
     private static void method1() {
@@ -92,19 +101,32 @@ public class Logic {
         return checkAllMessages(splitMessage);
     }
 
+    public static String getResponseNLP(String userInput) throws IOException {
+        String[] annotators = {"wseg", "pos", "ner", "parse"};
+        VnCoreNLP pipeline = new VnCoreNLP(annotators);
+        Annotation annotation = new Annotation(userInput);
+        pipeline.annotate(annotation);
+        List<Word> words = annotation.getWords();
+
+        ArrayList<String> splitWord = new ArrayList<String>();
+        for (Word word: words) {
+            splitWord.add(word.getForm());
+        }
+
+        String[] splitMessage = splitWord.toArray(new String[splitWord.size()]);
+
+        System.out.println("\nUser_Input: " + Arrays.toString(splitMessage));
+        return checkAllMessages(splitMessage);
+    }
 
     public static String checkAllMessages(String[] message) {
         Map<String, Integer> highestProbList = new HashMap<>();
 
         // Responses -------------------------------------------------------------------------------------------------------
         response(message, highestProbList, "Chào bạn!", new String[]{"chào", "hello", "alo"}, true, null);
-
         response(message, highestProbList, "Tạm biệt!", new String[]{"tạm biệt", "hẹn gặp lại"}, true, null);
-        response(message, highestProbList, "Tôi dạo này vẫn khỏe, còn bạn thì sao?", new String[]{"bạn", "dạo", "này", "thế", "nào"}, false, new String[]{"how"});
+        response(message, highestProbList, "Tôi dạo này vẫn khỏe, còn bạn thì sao?", new String[]{"bạn", "dạo", "này", "thế", "nào"}, false, new String[]{"bạn", "thế", "nào", });
 
-        response(message, highestProbList, "Không cần khách sáo, đó là công việc của tôi mà!", new String[]{"thank", "thanks"}, true, null);
-
-        response(message, highestProbList, "Vâng, đây sau đây là một số từ vựng liên quan đến mèo: \n", new String[]{"mèo", "từ vựng"}, true, null, Logic::method1);
 
         // Print the highest probability list for debugging
         System.out.println("Highest Probability List: " + highestProbList);

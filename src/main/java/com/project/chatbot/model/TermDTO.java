@@ -22,6 +22,9 @@ public class TermDTO {
     private String id;
     private String term;
 
+    private String type;
+
+    private String spelling;
     private String meaning;
     private List<String> example;
 
@@ -42,6 +45,15 @@ public class TermDTO {
         this.term = term;
         this.meaning = meaning;
         this.example = example;
+    }
+
+    public TermDTO(String term, String type, String spelling, String meaning, List<String> example, List<String> tags) {
+        this.term = term;
+        this.type = type;
+        this.spelling = spelling;
+        this.meaning = meaning;
+        this.example = example;
+        this.tags = tags;
     }
 
     public String getId() {
@@ -83,4 +95,21 @@ public class TermDTO {
     public void setTags(List<String> tags) {
         this.tags = tags;
     }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getSpelling() {
+        return spelling;
+    }
+
+    public void setSpelling(String spelling) {
+        this.spelling = spelling;
+    }
+
 }
