@@ -9,6 +9,7 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Setter
@@ -17,14 +18,16 @@ import java.util.Set;
 @NoArgsConstructor
 @Document(collection = "tags")
 public class TagDTO {
-    @Id
     private String id;
     private String name;
 
+    private List<String> keyword;
+
     // Constructors, getters, and setters
 
-    public TagDTO(String name) {
+    public TagDTO(String name, List<String> keyword) {
         this.name = name;
+        this.keyword = keyword;
     }
 
     // Getters and setters
@@ -45,4 +48,11 @@ public class TagDTO {
         this.name = name;
     }
 
+    public List<String> getKeyword() {
+        return keyword;
+    }
+
+    public void setKeyword(List<String> keyword) {
+        this.keyword = keyword;
+    }
 }

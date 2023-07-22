@@ -7,7 +7,10 @@ import java.io.IOException;
 
 public class LogicTest {
     public static void main(String[] args) throws IOException {
-        ChatBot chatBot = new ChatBot("D:\\gr1\\src\\main\\java\\com\\project\\chatbot\\logic\\response_data.json");
-        System.out.println(chatBot.getResponse("Hello there"));
+        System.out.println("Working Directory = " + System.getProperty("user.dir"));
+
+        ChatBot chatBot = new ChatBot();
+
+        System.out.println(chatBot.getResponse("Tôi cần học từ vựng về kinh tế").getAnswer());
     }
 }

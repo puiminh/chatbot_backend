@@ -1,0 +1,50 @@
+[
+  {
+    "intent": "greeting",
+    "user_input": ["hello", "hi", "hey"],
+    "bot_response": ["Hey there!"],
+    "required_words": []
+  },
+  {
+    "intent": "greeting",
+    "user_input": ["see you", "goodbye", "bye"],
+    "bot_response": ["See you later!"],
+    "required_words": []
+  },
+  {
+    "intent": "greeting",
+    "user_input": ["nice", "to", "meet", "you"],
+    "bot_response": ["The pleasure is all mine!"],
+    "required_words": ["nice", "meet", "you"]
+  },
+  {
+    "intent": "question",
+    "user_input": ["how", "to", "learn", "code", "coding", "apps"],
+    "bot_response": ["Start by typing: 'How to learn coding' on Google."],
+    "required_words": ["learn", "code"]
+  },
+  {
+    "intent": "question",
+    "user_input": ["refund", "how", "can", "I", "get"],
+    "bot_response": ["We don't offer refunds for free education."],
+    "required_words": ["refund", "i"]
+  },
+  {
+    "intent": "question",
+    "user_input": ["how", "are", "you"],
+    "bot_response": ["I'm great! Thanks for asking."],
+    "required_words": ["how", "are", "you"]
+  },
+  {
+    "intent": "learning_term",
+    "user_input": ["tôi","muốn","học","từ", "vựng"],
+    "bot_response": ["Có phải bạn muốn học từ vựng về..."],
+    "required_words": ["học", "từ","vựng"]
+  },
+  {
+    "intent": "learning_term",
+    "user_input": ["cho","từ","vựng","về"],
+    "bot_response": ["Có phải bạn muốn học từ vựng về..."],
+    "required_words": ["cho", "từ"]
+  }
+]

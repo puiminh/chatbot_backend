@@ -1,6 +1,7 @@
 package com.project.chatbot.controller;
 
 import com.project.chatbot.exception.MessageCollectionException;
+import com.project.chatbot.logic.Answer;
 import com.project.chatbot.model.MessageDTO;
 import com.project.chatbot.repository.MessageRepository;
 import com.project.chatbot.service.MessageService;
@@ -39,8 +40,8 @@ public class MessageController {
     @PostMapping("/messages")
     public ResponseEntity<?> createMessage(@RequestBody MessageDTO message) {
         try {
-            String res = messageService.createMessage(message);
-            return new ResponseEntity<>(res, HttpStatus.OK);
+            Answer res = messageService.createMessage(message);
+            return new ResponseEntity<Answer>(res, HttpStatus.OK);
         } catch (ConstraintViolationException e) {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.UNPROCESSABLE_ENTITY);
         } catch (MessageCollectionException e) {

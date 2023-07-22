@@ -1,6 +1,14 @@
 package com.project.chatbot.logic;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.project.chatbot.Data;
+import com.project.chatbot.repository.TagRepository;
+import org.apache.poi.ss.usermodel.Row;
+import org.springframework.beans.factory.annotation.Autowired;
+import vn.pipeline.Annotation;
+import vn.pipeline.Sentence;
+import vn.pipeline.VnCoreNLP;
+import vn.pipeline.Word;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -8,15 +16,22 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 public class ChatBot {
 
     private List<ResponseData> responseData;
+    private List<TagData> tagData;
 
     // Constructor to load ResponseData from JSON file
-    public ChatBot(String filePath) {
+    public ChatBot() {
         // Load the JSON data from the file and populate the responseData list
-        loadResponseDataFromJson(filePath);
+
+        String response_data_filepath = System.getProperty("user.dir") + "/src/response_data.json";
+        String tag_filepath = System.getProperty("user.dir") + "/src/tag.json";
+
+        loadResponseDataFromJson(response_data_filepath);
+        loadTagDataFromJson(tag_filepath);
     }
 
     // Define a method to split the input string and get the response
@@ -27,7 +42,9 @@ public class ChatBot {
         // Define attributes for the ResponseData class, you can add more as per your JSON structure
         private List<String> required_words;
         private List<String> user_input;
-        private String bot_response;
+        private List<String> bot_response;
+
+        private String intent;
 
         // Define getters and setters for the attributes
         public List<String> getRequiredWords() {
@@ -38,8 +55,29 @@ public class ChatBot {
             return user_input;
         }
 
-        public String getBotResponse() {
+        public List<String> getBotResponse() {
             return bot_response;
+        }
+
+        public String getIntent() { return intent; }
+    }
+
+    // Define a class to represent the Tag
+    public static class TagData {
+        private int id;
+        private String name;
+        private List<String> keyword;
+
+        public int getId() {
+            return id;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public List<String> getKeyword() {
+            return keyword;
         }
     }
 
@@ -58,8 +96,25 @@ public class ChatBot {
         }
     }
 
+    private void loadTagDataFromJson(String filePath) {
+        try (FileReader reader = new FileReader(filePath)) {
+            Gson gson = new Gson();
+
+            // Create a type to represent List<ResponseData>
+            Type tagDataListType = new TypeToken<List<TagData>>() {}.getType();
+
+            // Deserialize the JSON data into a List<ResponseData>
+            tagData = gson.fromJson(reader, tagDataListType);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     // Define a method to split the input string and get the response
-    public String getResponse(String inputString) {
+    public Answer getResponse(String inputString) throws IOException {
+
+        Answer answer = new Answer("Xin lỗi, tôi chưa được lập trình cho trường hợp này");
+
         List<String> splitMessage = Arrays.asList(inputString.toLowerCase().split("\\s+|[,;?!.-]\\s*"));
         List<Integer> scoreList = new ArrayList<>();
 
@@ -106,14 +161,73 @@ public class ChatBot {
 
         // Check if input is empty
         if (inputString.isEmpty()) {
-            return "Please type something so we can chat :(";
+            return new Answer("Please type something so we can chat :(");
         }
+
+        TagData tagDefine = null;
 
         // If there is no good response, return a random one.
         if (bestResponse != 0) {
-            return responseData.get(responseIndex).getBotResponse();
+
+            //Get this intent
+            answer.setIntent(responseData.get(responseIndex).getIntent());
+
+            String pob = "";
+
+            switch (answer.getIntent()) {
+                case "learning_term":
+
+                    String[] annotators = {"wseg", "pos", "ner", "parse"};
+                    VnCoreNLP pipeline = new VnCoreNLP(annotators);
+                    Annotation annotation = new Annotation(inputString);
+                    pipeline.annotate(annotation);
+                    List<Word> words = annotation.getWords();
+                    System.out.println(words.toString());
+
+                    //Get the Entity, Det
+
+
+                    for (Word word : words) {
+                        if (word.getDepLabel().equals("det")) {
+                            // Get the det
+
+                        }
+                        if (word.getDepLabel().equals("pob") && !word.getPosTag().equals("P")) {
+                            //Get the pob
+                            pob = word.getForm();
+                            System.out.println("Get the pob of Input: " + pob);
+                        }
+                    }
+
+                    for (TagData tag: tagData) {
+                        System.out.println("Now compare: " + tag.getKeyword().toString());
+
+                        for (String keyword: tag.getKeyword()) {
+                            if (pob.equals(keyword)) {
+                                answer.setEntity(tag.getName());
+                            }
+                        }
+                    }
+
+                    System.out.println("Get the entity of input: " + answer.getEntity());
+
+                    break;
+
+                default:
+
+                    System.out.println();
+                    break;
+            }
+
+            answer.setAnswer(getRandomAnswer(responseData.get(responseIndex).getBotResponse()));
+            return answer;
         }
 
-        return "...";
+        return answer;
+    }
+
+    public static String getRandomAnswer(List<String> array) {
+        int rnd = new Random().nextInt(array.size());
+        return array.get(rnd);
     }
 }
