@@ -4,7 +4,9 @@ import com.project.chatbot.exception.MessageCollectionException;
 import com.project.chatbot.logic.Answer;
 import com.project.chatbot.logic.ChatBot;
 import com.project.chatbot.model.MessageDTO;
+import com.project.chatbot.model.TermDTO;
 import com.project.chatbot.repository.MessageRepository;
+import com.project.chatbot.repository.TermRepository;
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,13 +14,19 @@ import vn.pipeline.Annotation;
 import vn.pipeline.VnCoreNLP;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
+import java.util.List;
 
 @Service
 public class MessageServiceImpl implements MessageService{
 
     @Autowired
     private MessageRepository messageRepository;
+
+    @Autowired
+    private TermRepository termRepository;
 
     ChatBot chatBot = new ChatBot();
     @Override
@@ -43,6 +51,10 @@ public class MessageServiceImpl implements MessageService{
             throw new RuntimeException(e);
         }
 
+        List<TermDTO> listTerm = termRepository.findAllTermWithTag(answer.getEntityId());
+
+        answer.setAnswer(answer.getAnswer() + pickNRandom(listTerm, answer.getNumber()).toString());
+
         return answer;
     }
 
@@ -57,5 +69,11 @@ public class MessageServiceImpl implements MessageService{
         System.out.println(annotation.toString());
 
         return annotation.toString();
+    }
+
+    public static List<TermDTO> pickNRandom(List<TermDTO> lst, int n) {
+        List<TermDTO> copy = new ArrayList<TermDTO>(lst);
+        Collections.shuffle(copy);
+        return n > copy.size() ? copy.subList(0, copy.size()) : copy.subList(0, n);
     }
 }

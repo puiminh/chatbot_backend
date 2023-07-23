@@ -18,6 +18,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
+import static com.project.chatbot.logic.WordToNumberConverter.convertWordToNumber;
+
 public class ChatBot {
 
     private List<ResponseData> responseData;
@@ -173,6 +175,7 @@ public class ChatBot {
             answer.setIntent(responseData.get(responseIndex).getIntent());
 
             String pob = "";
+            int det = 10;
 
             switch (answer.getIntent()) {
                 case "learning_term":
@@ -190,7 +193,13 @@ public class ChatBot {
                     for (Word word : words) {
                         if (word.getDepLabel().equals("det")) {
                             // Get the det
+                            det = convertWordToNumber(word.getForm());
 
+                            if (det == -1) {
+                                answer.setNumber(det);
+                            } else {
+                                answer.setNumber(4);
+                            }
                         }
                         if (word.getDepLabel().equals("pob") && !word.getPosTag().equals("P")) {
                             //Get the pob
@@ -205,6 +214,7 @@ public class ChatBot {
                         for (String keyword: tag.getKeyword()) {
                             if (pob.equals(keyword)) {
                                 answer.setEntity(tag.getName());
+                                answer.setEntityId(tag.getId());
                             }
                         }
                     }

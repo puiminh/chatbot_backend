@@ -6,6 +6,8 @@ public class Answer {
 
     private String entity = "";
 
+    private int entityId = -1;
+
     private int number = -1;
 
     public Answer(String answer, String intent) {
@@ -41,5 +43,21 @@ public class Answer {
 
     public void setEntity(String entity) {
         this.entity = entity;
+    }
+
+    public int getEntityId() {
+        return entityId;
+    }
+
+    public void setEntityId(int entityId) {
+        this.entityId = entityId;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
     }
 }

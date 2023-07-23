@@ -112,4 +112,14 @@ public class TermDTO {
         this.spelling = spelling;
     }
 
+    @Override
+    public String toString() {
+        return "TermDTO{" +
+                "term='" + term + '\'' +
+                ", type='" + type + '\'' +
+                ", spelling='" + spelling + '\'' +
+                ", meaning='" + meaning + '\'' +
+                ", example=" + example +
+                '}';
+    }
 }
