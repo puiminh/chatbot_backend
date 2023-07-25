@@ -1,16 +1,12 @@
 package com.project.chatbot.logic;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.project.chatbot.Data;
-import com.project.chatbot.repository.TagRepository;
-import org.apache.poi.ss.usermodel.Row;
-import org.springframework.beans.factory.annotation.Autowired;
 import vn.pipeline.Annotation;
-import vn.pipeline.Sentence;
 import vn.pipeline.VnCoreNLP;
 import vn.pipeline.Word;
 
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -29,11 +25,51 @@ public class ChatBot {
     public ChatBot() {
         // Load the JSON data from the file and populate the responseData list
 
-        String response_data_filepath = System.getProperty("user.dir") + "/src/response_data.json";
-        String tag_filepath = System.getProperty("user.dir") + "/src/tag.json";
+        loadData();
+    }
 
-        loadResponseDataFromJson(response_data_filepath);
-        loadTagDataFromJson(tag_filepath);
+    String response_data_filepath = System.getProperty("user.dir") + "/src/response_data.json";
+    String tag_filepath = System.getProperty("user.dir") + "/src/tag.json";
+
+    public void learn(String before, String content) {
+
+        try (FileReader reader = new FileReader(response_data_filepath)) {
+            Gson gson = new Gson();
+
+            // Create a type to represent List<ResponseData>
+            Type responseDataListType = new TypeToken<List<ResponseData>>() {}.getType();
+
+            // Deserialize the JSON data into a List<ResponseData>
+            List<ResponseData> existingData = gson.fromJson(reader, responseDataListType);
+
+            // Add new data to the existing list
+            if (existingData == null) {
+                existingData = new ArrayList<>();
+            }
+
+            List<String> splitBefore = Arrays.asList(before.toLowerCase().split("\\s+|[,;?!.-]\\s*"));
+            List<String> splitContent = Arrays.asList(content.toLowerCase().split("\\s+|[,;?!.-]\\s*"));
+
+
+            ResponseData newResponseData = new ResponseData();
+            newResponseData.setIntent(before);
+            newResponseData.setUser_input(splitBefore);
+            newResponseData.setBot_response(Arrays.asList(content));
+            newResponseData.setRequired_words(Arrays.asList());
+
+            existingData.add(newResponseData);
+
+
+            // Write the updated list back to the JSON file
+            try (FileWriter writer = new FileWriter(response_data_filepath)) {
+                gson.toJson(existingData, responseDataListType, writer);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     // Define a method to split the input string and get the response
@@ -62,6 +98,22 @@ public class ChatBot {
         }
 
         public String getIntent() { return intent; }
+
+        public void setRequired_words(List<String> required_words) {
+            this.required_words = required_words;
+        }
+
+        public void setUser_input(List<String> user_input) {
+            this.user_input = user_input;
+        }
+
+        public void setBot_response(List<String> bot_response) {
+            this.bot_response = bot_response;
+        }
+
+        public void setIntent(String intent) {
+            this.intent = intent;
+        }
     }
 
     // Define a class to represent the Tag
@@ -112,6 +164,13 @@ public class ChatBot {
         }
     }
 
+    public void loadData() {
+
+
+        loadResponseDataFromJson(response_data_filepath);
+        loadTagDataFromJson(tag_filepath);
+    }
+
     // Define a method to split the input string and get the response
     public Answer getResponse(String inputString) throws IOException {
 
@@ -135,11 +194,11 @@ public class ChatBot {
                 }
             }
 
-            // Amount of required words should match the required score
+            // Amount of required words should match the required score, if not, the score = 0
             if (requiredScore == requiredWords.size()) {
                 // Check each word the user has typed
                 for (String word : splitMessage) {
-                    // If the word is in the response, add to the score
+                    // If the word is in the response (bot required this), add to the score
                     if (response.getUserInput().contains(word)) {
                         responseScore++;
                     }
@@ -163,7 +222,7 @@ public class ChatBot {
 
         // Check if input is empty
         if (inputString.isEmpty()) {
-            return new Answer("Please type something so we can chat :(");
+            return new Answer("Xin lỗi, nhưng bạn đang chưa nhập tin nhắn của bạn");
         }
 
         TagData tagDefine = null;
@@ -195,7 +254,7 @@ public class ChatBot {
                             // Get the det
                             det = convertWordToNumber(word.getForm());
 
-                            if (det == -1) {
+                            if (det != 0) {
                                 answer.setNumber(det);
                             } else {
                                 answer.setNumber(4);

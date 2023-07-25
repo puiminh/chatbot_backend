@@ -37,8 +37,26 @@ public class MessageController {
         }
     }
 
+    @GetMapping("/reload_data")
+    public ResponseEntity<?> reloadData() {
+        messageService.reloadData();
+        return new ResponseEntity<>("Reload success", HttpStatus.OK);
+    }
+
     @PostMapping("/messages")
     public ResponseEntity<?> createMessage(@RequestBody MessageDTO message) {
+        try {
+            Answer res = messageService.createMessage(message);
+            return new ResponseEntity<Answer>(res, HttpStatus.OK);
+        } catch (ConstraintViolationException e) {
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.UNPROCESSABLE_ENTITY);
+        } catch (MessageCollectionException e) {
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.CONFLICT);
+        }
+    }
+
+    @PostMapping("/learn")
+    public ResponseEntity<?> learnFromUser(@RequestBody MessageDTO message) {
         try {
             Answer res = messageService.createMessage(message);
             return new ResponseEntity<Answer>(res, HttpStatus.OK);
@@ -58,6 +76,8 @@ public class MessageController {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.UNPROCESSABLE_ENTITY);
         }
     }
+
+
     @GetMapping("/messages/{id}")
     public ResponseEntity<?> getSingleMessage(@PathVariable("id") String id) {
         Optional<MessageDTO> messageDTOOptional = messageRepository.findById(id);

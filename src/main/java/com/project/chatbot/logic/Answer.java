@@ -8,7 +8,7 @@ public class Answer {
 
     private int entityId = -1;
 
-    private int number = -1;
+    private int number = 0;
 
     public Answer(String answer, String intent) {
         this.answer = answer;

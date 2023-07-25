@@ -20,6 +20,18 @@ public class WordToNumberConverter {
 
     public static int convertWordToNumber(String word) {
         Integer number = wordToNumberMap.get(word);
-        return (number != null) ? number : -1; // Trả về -1 nếu từ không hợp lệ
+        if (number != null) {
+            return number;
+        } else {
+            return Integer.parseInt(word);
+        }
+    }
+
+    public static int convertWordToNumber(int word) {
+        return word;
+    }
+
+    public static void main(String[] args) {
+       System.out.println(convertWordToNumber("1"));
     }
 }

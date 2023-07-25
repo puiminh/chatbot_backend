@@ -11,6 +11,12 @@ public class LogicTest {
 
         ChatBot chatBot = new ChatBot();
 
-        System.out.println(chatBot.getResponse("Tôi cần học từ vựng về kinh tế").getAnswer());
+        System.out.println(chatBot.getResponse("Một một một").getAnswer());
+
+        chatBot.learn("Một một một", "hai hai hai");
+
+        chatBot.loadData();
+
+        System.out.println(chatBot.getResponse("Một một một").getAnswer());
     }
 }

@@ -24,13 +24,16 @@ public class MessageDTO {
     @NotNull(message = "Content cannot be null")
 
     private String content;
+
+    private String before;
     private Date timestamp;
 
     // Constructors, getters, and setters
 
-    public MessageDTO(String userId, String content) {
+    public MessageDTO(String userId, String content, String before) {
         this.userId = userId;
         this.content = content;
+        this.before = before;
         this.timestamp = new Date();
     }
 
@@ -66,5 +69,13 @@ public class MessageDTO {
 
     public void setTimestamp(Date timestamp) {
         this.timestamp = timestamp;
+    }
+
+    public String getBefore() {
+        return before;
+    }
+
+    public void setBefore(String before) {
+        this.before = before;
     }
 }

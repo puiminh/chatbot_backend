@@ -10,5 +10,10 @@ import java.io.IOException;
 public interface MessageService {
     public Answer createMessage(MessageDTO messageDTO) throws ConstraintViolationException, MessageCollectionException;
 
+    public Answer learnFromUser(MessageDTO messageDTO) throws ConstraintViolationException;
+
     public String analysisMessage(MessageDTO messageDTO) throws IOException;
+
+    public void reloadData();
+
 }

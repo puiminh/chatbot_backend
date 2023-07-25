@@ -53,9 +53,33 @@ public class MessageServiceImpl implements MessageService{
 
         List<TermDTO> listTerm = termRepository.findAllTermWithTag(answer.getEntityId());
 
-        answer.setAnswer(answer.getAnswer() + pickNRandom(listTerm, answer.getNumber()).toString());
+        answer.setAnswer(answer.getAnswer() + pickNRandom(listTerm, answer.getNumber()));
 
         return answer;
+    }
+
+    @Override
+    public Answer learnFromUser(MessageDTO messageDTO) throws ConstraintViolationException {
+
+        Answer answer;
+
+        messageDTO.setTimestamp(new Date(System.currentTimeMillis()));
+        messageRepository.save(messageDTO);
+
+        if (messageDTO.getContent().toLowerCase().equals("skip")) {
+            //Nguoi dung skip
+
+        } else {
+            chatBot.learn(messageDTO.getBefore(), messageDTO.getContent());
+        }
+
+        answer = new Answer("Cảm ơn bạn đã đóng góp cho chatbot");
+
+        return answer;
+    }
+
+    public void reloadData() {
+        chatBot.loadData();
     }
 
     public String analysisMessage(MessageDTO messageDTO) throws IOException {
