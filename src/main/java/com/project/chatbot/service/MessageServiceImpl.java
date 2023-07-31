@@ -51,11 +51,22 @@ public class MessageServiceImpl implements MessageService{
             throw new RuntimeException(e);
         }
 
-        List<TermDTO> listTerm = termRepository.findAllTermWithTag(answer.getEntityId());
+        if (answer.getIntent().equals("learning_term")) {
+            List<TermDTO> listTerm = termRepository.findAllTermWithTag(answer.getEntityId());
 
-        answer.setAnswer(answer.getAnswer() + pickNRandom(listTerm, answer.getNumber()));
-
+            if (answer.getNumber() == 0) answer.setNumber(5);
+            answer.setListTerm(pickNRandom(listTerm, answer.getNumber()));
+            if (answer.getListTerm().size() != 0) {
+                answer.setAnswer("Sau đây là " + answer.getNumber() + " từ vựng: ");
+            } else {
+                answer.setAnswer("Xin lỗi trong cơ sở dữ liệu hiện tại bọn tôi chưa có");
+            }
+        } else {
+            answer.setAnswer(answer.getAnswer());
+        }
         return answer;
+
+
     }
 
     @Override
@@ -71,6 +82,8 @@ public class MessageServiceImpl implements MessageService{
 
         } else {
             chatBot.learn(messageDTO.getBefore(), messageDTO.getContent());
+
+            chatBot.loadData();
         }
 
         answer = new Answer("Cảm ơn bạn đã đóng góp cho chatbot");

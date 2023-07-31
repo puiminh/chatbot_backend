@@ -59,12 +59,10 @@ public class MessageController {
     @PostMapping("/learn")
     public ResponseEntity<?> learnFromUser(@RequestBody MessageDTO message) {
         try {
-            Answer res = messageService.createMessage(message);
+            Answer res = messageService.learnFromUser(message);
             return new ResponseEntity<Answer>(res, HttpStatus.OK);
         } catch (ConstraintViolationException e) {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.UNPROCESSABLE_ENTITY);
-        } catch (MessageCollectionException e) {
-            return new ResponseEntity<>(e.getMessage(), HttpStatus.CONFLICT);
         }
     }
 

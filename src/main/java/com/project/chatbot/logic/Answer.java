@@ -1,5 +1,13 @@
 package com.project.chatbot.logic;
 
+import com.project.chatbot.model.TermDTO;
+import org.jetbrains.annotations.NotNull;
+
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+
 public class Answer {
     private String answer;
     private String intent;
@@ -10,6 +18,8 @@ public class Answer {
 
     private int number = 0;
 
+    private List<TermDTO> listTerm;
+
     public Answer(String answer, String intent) {
         this.answer = answer;
         this.intent = intent;
@@ -18,7 +28,6 @@ public class Answer {
     public Answer(String answer) {
         this.answer = answer;
         this.intent = "identify";
-
     }
 
     public String getAnswer() {
@@ -59,5 +68,25 @@ public class Answer {
 
     public void setNumber(int number) {
         this.number = number;
+    }
+
+    public List<TermDTO> getListTerm() {
+        return listTerm;
+    }
+
+    public void setListTerm(List<TermDTO> listTerm) {
+        this.listTerm = listTerm;
+    }
+
+    @Override
+    public String toString() {
+        return "Answer{" +
+                "answer='" + answer + '\'' +
+                ", intent='" + intent + '\'' +
+                ", entity='" + entity + '\'' +
+                ", entityId=" + entityId +
+                ", number=" + number +
+                ", listTerm=" + listTerm +
+                '}';
     }
 }

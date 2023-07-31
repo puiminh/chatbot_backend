@@ -103,5 +103,10 @@
     "id": 20,
     "name": "politic",
     "keyword": ["chính_trị"]
+  },
+  {
+    "id": 21,
+    "name": "education",
+    "keyword": ["ngẫu_nhiên", "bất_kỳ"]
   }
 ]

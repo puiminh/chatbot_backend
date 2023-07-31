@@ -55,7 +55,7 @@ public class ChatBot {
             newResponseData.setIntent(before);
             newResponseData.setUser_input(splitBefore);
             newResponseData.setBot_response(Arrays.asList(content));
-            newResponseData.setRequired_words(Arrays.asList());
+            newResponseData.setRequired_words(splitBefore);
 
             existingData.add(newResponseData);
 
@@ -233,7 +233,7 @@ public class ChatBot {
             //Get this intent
             answer.setIntent(responseData.get(responseIndex).getIntent());
 
-            String pob = "";
+            List<String> entityList = new ArrayList<>();
             int det = 10;
 
             switch (answer.getIntent()) {
@@ -248,9 +248,9 @@ public class ChatBot {
 
                     //Get the Entity, Det
 
-
-                    for (Word word : words) {
-                        if (word.getDepLabel().equals("det")) {
+                    for (int i = 0; i < words.size(); i++) {
+                        Word word = words.get(i);
+                        if (word.getDepLabel().equals("det") || word.getDepLabel().equals("iob")) {
                             // Get the det
                             det = convertWordToNumber(word.getForm());
 
@@ -260,22 +260,39 @@ public class ChatBot {
                                 answer.setNumber(4);
                             }
                         }
+
+                        //Các trường hợp được xem xét xét entity
+                        //TH1: POB
                         if (word.getDepLabel().equals("pob") && !word.getPosTag().equals("P")) {
                             //Get the pob
-                            pob = word.getForm();
-                            System.out.println("Get the pob of Input: " + pob);
+                            if (isMultiWord(word.getForm())) { //Nếu đã là từ nhiều -> thêm luôn
+                                entityList.add(word.getForm());
+                            } else { //Không thì phải lấy thêm (đồ + _ + uống)
+                                entityList.add(word.getForm() + "_" + words.get(i+1).getForm());
+                            }
+                        }
+                        //TH2: VMOD (trong 1 số trường hợp thì vmod mới chính là chủ đề
+                        if (word.getDepLabel().equals("vmod") && isMultiWord(word.getForm())) {
+                            entityList.add(word.getForm());
                         }
                     }
+                    System.out.println("Get the pobList: " + entityList.toString());
 
                     for (TagData tag: tagData) {
                         System.out.println("Now compare: " + tag.getKeyword().toString());
 
                         for (String keyword: tag.getKeyword()) {
-                            if (pob.equals(keyword)) {
-                                answer.setEntity(tag.getName());
-                                answer.setEntityId(tag.getId());
+                            for (String entity: entityList) {
+                                if (entity.equals(keyword)) {
+                                    answer.setEntity(tag.getName());
+                                    answer.setEntityId(tag.getId());
+                                }
                             }
                         }
+                    }
+
+                    if (answer.getEntity().equals("")) { //in case can't get the entity, using special case catch
+                        answer.setAnswer("Xin lỗi, chúng tôi chưa có dữ liệu cho từ vựng mà bạn muốn học");
                     }
 
                     System.out.println("Get the entity of input: " + answer.getEntity());
@@ -298,5 +315,9 @@ public class ChatBot {
     public static String getRandomAnswer(List<String> array) {
         int rnd = new Random().nextInt(array.size());
         return array.get(rnd);
+    }
+
+    private static boolean isMultiWord(String word) {
+        return word.contains("_");
     }
 }

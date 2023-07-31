@@ -1,7 +1,6 @@
 package com.project.chatbot;
 
 import com.project.chatbot.logic.ChatBot;
-import com.project.chatbot.logic.Logic;
 
 import java.io.IOException;
 
@@ -11,12 +10,6 @@ public class LogicTest {
 
         ChatBot chatBot = new ChatBot();
 
-        System.out.println(chatBot.getResponse("Một một một").getAnswer());
-
-        chatBot.learn("Một một một", "hai hai hai");
-
-        chatBot.loadData();
-
-        System.out.println(chatBot.getResponse("Một một một").getAnswer());
+        System.out.println(chatBot.getResponse("Cho tôi 3 từ vựng về kinh doanh").toString());
     }
 }
